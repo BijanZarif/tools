@@ -143,7 +143,7 @@ def fluent2xml(ifilename, ofilename):
             a = re.search(re_cells,line) # Get the cell info.
             if a:
                 zone_id, first_id, last_id, bc_type, element_type = \
-                    int(a.group(1)), int(a.group(2), 16), int(a.group(3), 16), \
+                    int(a.group(1), 16), int(a.group(2), 16), int(a.group(3), 16), \
                     int(a.group(4), 16), int(a.group(5), 16)
                 print 'Found ', last_id - first_id + 1,' cells in zone ', zone_id, '\n'
                 if last_id == 0:
